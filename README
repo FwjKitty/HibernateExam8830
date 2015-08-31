@@ -1,0 +1,4 @@
+程序运行步骤：
+mvn clean
+mvn compile
+mvn exec:java -Dexec.mainClass="App"
