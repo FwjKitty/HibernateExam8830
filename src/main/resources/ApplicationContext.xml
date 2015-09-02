@@ -89,7 +89,11 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 				<value>classpath:model/hbm</value> 
 			</list>
 		</property> -->
+		
+		<!-- 配置拦截器 -->
+		<property name="entityInterceptor" ref="customerInterceptor"/>
 	</bean>
+	<bean id="customerInterceptor" class="interceptor.CustomerInterceptor"/>
 
 	<!-- 配置事务管理器（声明式的事务） -->
 	<bean name="transactionManager"
